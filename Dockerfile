@@ -4,7 +4,7 @@ MAINTAINER Raghvi Gupta
 ENV PYTHONUNBUFFERED 1
 
 COPY ./requirement.txt ./requirement.txt
-RUN pip install -r requirement.txt
+RUN pip install -r /requirement.txt
 
 
 RUN mkdir app/
