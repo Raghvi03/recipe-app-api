@@ -1,11 +1,19 @@
 from rest_framework import serializers
-from core.models import Tag
+from core.models import Tag, Ingredient
 
 
 class TagSerializer(serializers.ModelSerializer):
-    """ Serrializer for log objects"""
+    """ Serrializer for tag objects"""
 
     class Meta:
         model = Tag
+        fields = ('id', 'name')
+        read_only_fields = ('id',)
+
+class IngredientSerializer(serializers.ModelSerializer):
+    """ Serrializer for Ingredient objects"""
+
+    class Meta:
+        model = Ingredient
         fields = ('id', 'name')
         read_only_fields = ('id',)
