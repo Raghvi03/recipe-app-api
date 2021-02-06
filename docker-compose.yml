@@ -26,4 +26,6 @@ services:
       - POSTGRES_DB=app
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=supersecretpassword
+    volumes:
+      - /home/ubuntu/dbcompse/recipe_db:/var/lib/postgresql/data
       
